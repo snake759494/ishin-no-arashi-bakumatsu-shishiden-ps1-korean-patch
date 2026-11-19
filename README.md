@@ -5,8 +5,8 @@ PS1 일본판 **維新の嵐 幕末志士伝 (유신의 폭풍 막말지사전, 
 ## 적용 방법
 1. 아래 해시와 일치하는 **원본 `.bin`/`.cue`** (Redump 형식, 트랙 4개: 데이터 1 + 오디오 3)를 준비합니다. (CHD·PBP·ECM 등으로 변환한 이미지에는 적용할 수 없습니다.)
    - PowerShell: `Get-FileHash -Algorithm MD5 -LiteralPath '.\Ishin no Arashi - Bakumatsu Shishiden (Japan) (Track 1).bin'`
-2. xdeltaUI 같은 도구로 원본 **트랙 1** `.bin` 에 `Ishin_no_Arashi_Bakumatsu_Shishiden_KO_v1.1.xdelta` 를 적용합니다. (Patch = xdelta, Source File = 원본 트랙 1 BIN, Output File = 새 파일명)
-   - 명령줄: `xdelta3 -d -s "Ishin no Arashi - Bakumatsu Shishiden (Japan) (Track 1).bin" Ishin_no_Arashi_Bakumatsu_Shishiden_KO_v1.1.xdelta "Ishin no Arashi - Bakumatsu Shishiden (Japan) [KR] (Track 1).bin"`
+2. xdeltaUI 같은 도구로 원본 **트랙 1** `.bin` 에 `Ishin_no_Arashi_Bakumatsu_Shishiden_KO_v1.2.xdelta` 를 적용합니다. (Patch = xdelta, Source File = 원본 트랙 1 BIN, Output File = 새 파일명)
+   - 명령줄: `xdelta3 -d -s "Ishin no Arashi - Bakumatsu Shishiden (Japan) (Track 1).bin" Ishin_no_Arashi_Bakumatsu_Shishiden_KO_v1.2.xdelta "Ishin no Arashi - Bakumatsu Shishiden (Japan) [KR] (Track 1).bin"`
 3. 원본 `.cue` 를 복사해 이름을 바꾸고, 첫 번째 `FILE "..."` 줄(트랙 1)만 새 `.bin` 파일명으로 고칩니다. 트랙 2~4(오디오)는 원본 파일을 그대로 씁니다.
 4. 만들어진 `.cue` 를 DuckStation 등 PS1 에뮬레이터나 ODE 장치에서 실행합니다.
 
@@ -15,12 +15,12 @@ PS1 일본판 **維新の嵐 幕末志士伝 (유신의 폭풍 막말지사전, 
 | 원본 트랙 1 BIN 크기 | 317,174,256 바이트 |
 | 원본 트랙 1 BIN MD5 | `b32b20b5f43ec90b0d97d4977e3ab530` |
 | 원본 트랙 1 BIN SHA-256 | `4b1e44f33068a34e6361b0785c9982584b3ea5facca2d3bec5b0c8253ebe3e20` |
-| xdelta SHA-256 | `fce2c86da08c3990489c0d6f000fb7b11b359221520757bbd8fd4144582a1dd2` |
+| xdelta SHA-256 | `6d3c5e19d230d593659bf3c6bf3ab6310553a65ecb2b0164dd25c45e7bcb8855` |
 | 결과 BIN 크기 | 317,174,256 바이트 |
-| 결과 BIN SHA-256 | `20df9fc91108317314a597063dca2c90925f1a79901a3ec2a6c87ac9f8a44ed9` |
+| 결과 BIN SHA-256 | `6679448eedd87b3067f7f6c3dba7bec73e2717d3270621489c02fa18c0af4386` |
 
 ## 주의
-- v1.0에서 게임 저장 시 "메모리 카드 확인 중" 창에서 멈추던 문제가 v1.1에서 고쳐졌습니다. v1.0 사용자는 v1.1 xdelta를 **원본** BIN에 다시 적용하세요.
+- v1.0에서 게임 저장 시 "메모리 카드 확인 중" 창에서 멈추던 문제가 v1.1에서 고쳐졌습니다. 이전 버전 사용자는 최신 xdelta를 **원본** BIN에 다시 적용하세요.
 - 원본에서 만든 **상태저장(세이브 스테이트)** 은 불러오지 마세요. 실행 파일과 글꼴 배치가 달라 글자가 깨지거나 멈춥니다. 메모리 카드 세이브는 그대로 쓸 수 있습니다.
 - xdelta는 압축하지 않은 형식(`-0`)입니다(약 1.5MB).
 

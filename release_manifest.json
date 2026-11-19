@@ -1,11 +1,11 @@
 {
- "version": "v1.1",
- "asset": "Ishin_no_Arashi_Bakumatsu_Shishiden_KO_v1.1.xdelta",
+ "version": "v1.2",
+ "asset": "Ishin_no_Arashi_Bakumatsu_Shishiden_KO_v1.2.xdelta",
  "asset_size": 1531544,
- "asset_sha256": "fce2c86da08c3990489c0d6f000fb7b11b359221520757bbd8fd4144582a1dd2",
+ "asset_sha256": "6d3c5e19d230d593659bf3c6bf3ab6310553a65ecb2b0164dd25c45e7bcb8855",
  "source_bin_size": 317174256,
  "source_bin_md5": "b32b20b5f43ec90b0d97d4977e3ab530",
  "source_bin_sha256": "4b1e44f33068a34e6361b0785c9982584b3ea5facca2d3bec5b0c8253ebe3e20",
  "result_bin_size": 317174256,
- "result_bin_sha256": "20df9fc91108317314a597063dca2c90925f1a79901a3ec2a6c87ac9f8a44ed9"
+ "result_bin_sha256": "6679448eedd87b3067f7f6c3dba7bec73e2717d3270621489c02fa18c0af4386"
 }
