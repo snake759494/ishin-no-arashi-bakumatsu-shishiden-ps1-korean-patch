@@ -307,6 +307,7 @@ for nm, d in bins.items():
     for k, v in S.items():
 
         off = int(k.rsplit('.', 1)[1], 16)
+        if nm == 'SLPM_861' and 0x2f000 <= off < 0x104000: continue   # 코드 영역의 가짜 문자열(명령어 바이트) 제외
 
         ko = KO.get(v['ja'])
 
@@ -637,6 +638,7 @@ for a, o_, n_ in [(0x80171ca0, 0x3a, 0x60), (0x80171d88, 0x82, 0x98), (0x80171e2
 
     imm('COM', a, o_, n_)
 
+raw('SLPM_861', 0x2cc0c, ' %d. %s  %4d年%2d月%2d日'.encode('cp932'), b' %d. %s  %4d' + enc('년') + b'%2d' + enc('월') + b'%2d' + enc('일'))   # 세이브 목록 날짜
 raw('COM', 0x34ac, '－' .encode('cp932') * 7, '－'.encode('cp932') * 5 + bytes(4))
 
 # 관광 탭: 온천 4+3 두 줄(48px 간격), 명물특산 3열 격자(72px). 좌표표를 만들던 죽은 코드 자리를 동굴로 사용
